@@ -1,0 +1,520 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SSTD 2025</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="shortcut icon" href="./images/favicon.ico" />
+  <style>
+  /* Base styles for all tables */
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    /* Allow horizontal scrolling on small screens */
+    overflow-x: auto;
+    display: block;
+    line-height: 1.5em;
+  }
+
+  /* Specific styles for table headers and cells */
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #dddddd;
+    padding: 4px; /* Reduced padding to save space */
+    vertical-align: top;
+
+  }
+
+  /* Specific style for table headers */
+  .schedule-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Time column styling to match header and prevent wrapping */
+  .schedule-table th.time-column,
+  .schedule-table td.time-column {
+    width: 10%;
+    
+    background-color: #f2f2f2;
+    
+    text-align: center;
+  }
+
+  /* Centered session column */
+  .schedule-table th.session-column,
+  .schedule-table td.session-column {
+  	width: 17%;
+    text-align: center;
+  }
+
+  /* Left-aligned details column */
+  .schedule-table th.details-column,
+  .schedule-table td.details-column {
+  	width: 73%;
+    text-align: left;
+  }
+
+  /* Social event cell styling */
+  .schedule-table td.social-event {
+    text-align: center;
+  }
+
+  /* Reduced vertical space in detail cells and center lists */
+  .schedule-table td p, .schedule-table td ul {
+    margin: 4px 0; /* Reduced margin to remove empty space */
+    padding: 0;
+  }
+
+  .schedule-table td ul {
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 15px;
+  }
+  
+  .schedule-table td.social-event ul {
+    text-align: center;
+  }
+  
+  .schedule-table td.social-event ul li {
+    text-align: left;
+    display: inline-block;
+  }
+
+  /* Row colors based on content type */
+  .schedule-table tr.keynote {
+    background-color: #fffacd; /* light yellow */
+  }
+
+  .schedule-table tr.tutorial {
+    background-color: #e6ffef; /* light green */
+  }
+
+  .schedule-table tr.social {
+    background-color: #ffe6f2; /* light pink */
+  }
+
+  .schedule-table tr.session, .schedule-table tr.default {
+    background-color: #ffffff; /* white */
+  }
+
+  /* Hover effect for rows */
+  .schedule-table tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+
+  /* Session title formatting */
+  .session-title {
+     font-weight: bold;
+    
+    color: #005a8d;
+  }
+
+  /* Paper title formatting (long/short) */
+  .long-paper {
+
+     font-weight: bold;
+    
+    display: block;
+  }
+
+  /* Author font size and margin */
+  .author {
+    font-size: 0.9em;
+    display: block; /* Ensure author is on a new line */
+    margin-top: 0; /* Remove top margin to reduce space */
+    
+  }
+
+  /* Location/note formatting */
+  .location {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+  }
+
+  /* Note block styling */
+  .note {
+    background-color: #fffacd;
+    padding: 15px;
+    border-left: 5px solid #ffeb3b;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+  }
+
+  /* Heading styles */
+  h2, h3 {
+    color: #003366;
+    border-bottom: 2px solid #005a8d;
+    padding-bottom: 5px;
+  }
+   /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .schedule-table {
+      width: 100%;
+    }
+  }
+  
+</style>
+	</head>
+	<body class="is-preload">
+
+
+
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="officers.html">Organizers</a></li>
+				<li><a href="calls.html">Call for Papers / Tutorials</a></li>
+			<li><a class="active" href="program.html">Program</a></li>
+			<li><a href="attend.html">Attend</a></li>
+			</ul>
+		</nav>
+
+
+		<nav id="subnav">
+			<ul class="container">
+				<li><a href="program_full_detail.html">Detailed Program</a></li>
+				<li><a href="keynotes.html">Keynotes</a></li>
+				<li><a href="papers.html">Accepted Papers</a></li>
+				<li><a href="tutorials.html">Accepted Tutorials</a></li>
+				<li><a href="awards.html">Awards</a></li>
+				<li><a href="panel.html">Panel</a></li>
+			</ul>
+		</nav>
+
+		<p>&nbsp;</p>
+
+
+		<!-- Header -->
+		<section id="header" class="dark" style="max-height: 100px;">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<!--
+					<div class="col-2 col-12-narrow">
+						<img src="images/sstd19_logo.svg" style="width:100%; max-width: 200px; margin-bottom:12px;">
+					</div>
+					-->
+					<div class="col-12 col-12-narrow">
+						<header>
+							<h1>19th International Symposium on Spatial and Temporal Data</h1>
+							<p>25-27 August 2025</br>
+								Osaka, Japan</p>
+							</header>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Conference Program -->
+		
+		<section id="program" class="main">
+			<header>
+				<div class="container">
+					<h2>Conference Program</h2>
+<span style="font-weight: bold;">Conference venue:</span> Meeting Room, 10/F, Nakanoshima center, Osaka University.<br>
+<span style="font-weight: bold;">Registration desk:</span> The registration desk is located in front of this meeting room. The registration desk opens at 9am daily and closes at 5pm, except on the last day when it closes at 3pm.</p>
+
+<h2>Day 1 – Monday, August 25</h2>
+<table class="schedule-table">
+  <thead>
+    <tr>
+      <th class="time-column">Time</th>
+      <th class="session-column">Session</th>
+      <th class="details-column">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="default">
+      <td class="time-column">09:00-09:45</td>
+      <td class="session-column" colspan="2">Registration</td>
+      
+    </tr>
+    <tr class="default">
+      <td class="time-column">09:45-10:00</td>
+      <td class="session-column" colspan="2">Opening Remarks</td>
+      
+    </tr>
+    <tr class="keynote">
+      <td class="time-column">10:00-11:00</td>
+      <td class="session-column" colspan="2"><span class="long-paper"><a href="keynotes.html#keynote1">Keynote Talk #1 - Engineering the Digital Twin Society: Harnessing Spatiotemporal Data through AI</a></span>Prof. Hirozumi Yamaguchi (Osaka University)<span class="author">Session Chair: Hamada Rizk, Osaka University, Japan </span></td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">11:00-11:20</td>
+      <td class="social-event" colspan="2">Coffee Break</td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">11:20-11:55</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s1">Session 1 - Spatial and Spatio-temporal Data and Language Models</a></span><span class="author">Session Chair: Kyoungsook Kim, AIST, Japan</span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-3.pdf" target="_blank">SNC: A Framework for Verification and Generation of Spatial NLQ Corpora</a></span>
+        <span class="author">Weijia Yi (Nanjing University of Aeronautics and Astronautics); Xieyang Wang (Nanjing University of Aeronautics and Astronautics); Mengyi Liu (Nanjing University of Aeronautics and Astronautics); Jianqiu Xu (Nanjing University of Aeronautics and Astronautics)  - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-10.pdf" target="_blank">Comprehending Spatio-temporal Data via Cinematic Storytelling using Large Language Models</a></span> 
+        <span class="author">Panos Kalnis (King Abdullah University of Science and Technology); Shuo Shang (University of Electronic Science and Technology of China); Christian Jensen (Aalborg University) - SHORT</span>
+      </td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">11:55-12:45</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s2">Session 2 - Data Mining and Forecasting</a></span><span class="author">Session Chair: Panos Kalnis, KAUST, Saudi Arabia</span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-12.pdf" target="_blank">Multivariate Tests for Point and Probabilistic Forecasts, with an Application to Spatio-temporal Weather Forecast Evaluation</a></span> 
+        <span class="author">Annette Jing (Stanford University); Phillip Jang (Amazon) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-16.pdf" target="_blank">Distributed Community Detection in Temporal Graphs</a></span>
+        <span class="author">Konstantinos Christopoulos (University of Patras); Konstantinos Tsichlas (University of Patras) -  SHORT</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-13.pdf" target="_blank">Discovering Super-Colocation Patterns: A Summary of Results</a></span>
+        <span class="author">Shuai An (University of Minnesota); Shesha Sai Kumar Reddy Sadu (University of Minnesota); Arun Sharma (University of Minnesota); Majid Farhadloo (University of Minnesota); Shashi Shekhar (University of Minnesota) - SHORT</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">12:45-13:45</td>
+      <td class="social-event" colspan="2">Lunch Break</td>
+    </tr>
+    <tr class="tutorial">
+      <td class="time-column">13:45-15:10</td>
+      <td class="session-column" colspan="2">
+        <span class="long-paper"><a href="tutorials.html#t1">Tutorial 1 - Spatial Regionalization: Algorithms and Challenges</a></span>
+        <span class="author">Amr Magdy (University of California, Riverside)*; Yongyi Liu (University of California, Riverside)</span>
+      </td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">15:10-16:10</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s3">Session 3 - Maritime Data</a></span><span class="author">Session Chair: Chiara Pugliese, IIT-CNR, Italy</span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-7.pdf" target="_blank">A Multi-Modal Knowledge-Enhanced Framework for Vessel Trajectory Prediction</a></span>
+        <span class="author">Haomin Yu (Aalborg University); Tianyi Li (Aalborg University); Kristian Torp (Aalborg University); Christian S. Jensen (Aalborg University) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-2.pdf" target="_blank">Physics-Informed Neural Networks for Vessel Trajectory Prediction: Learning Time-Discretized Kinematic Dynamics via Finite Differences</a></span> 
+        <span class="author">Md Mahbub Alam (Dalhousie University); José F. Rodrigues-Jr (University of Sao Paulo); Amilcar Soares-Jr (Linnaeus University); Gabriel Spadon (Dalhousie University) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-15.pdf" target="_blank">ImPORTance - Machine Learning-Driven Analysis of Global Port Significance and Network Dynamics for Improved Operational Efficiency</a></span> 
+        <span class="author">Emanuele Carlini (ISTI/CNR); Domenico Di Gangi (ISTI/CNR); Vinicius Monteiro de Lira (UFC); Hanna Kavalionak (ISTI/CNR); Amilcar Soares (Linnaeus University); Gabriel Spadon (Dalhousie University) - LONG</span>
+    </tr>
+    <tr class="social">
+      <td class="time-column">16:10-16:30</td>
+      <td class="social-event" colspan="2">Coffee Break</td>
+    </tr>
+    <tr class="tutorial">
+      <td class="time-column">16:30-17:55</td>
+      <td class="session-column" colspan="2"><span class="long-paper"><a href="tutorials.html#t2">Tutorial 2 -
+        Heterogeneity in Multivariate Time Series: Comprehensive Analysis and Adaptive Modeling</a></span>
+<span class="author">Zezhi Shao (Institute of Computing Technology, Chinese Academy of Sciences)*; Chengqing Yu (Institute of Computing Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences); Fei Wang (Institute of Computing Technology, Chinese Academy of Sciences)</span>
+
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">18:30-21:00</td>
+      <td class="social-event" colspan="2">
+        <p>Welcome Reception: Light food & drinks, networking at BOOCHiC</p>
+        <p class="location">Address: 2/F, Daibiru Main Building, 3 Chome-6-32 Nakanoshima, Kita Ward, Osaka, 530-0005, Japan <a href="https://maps.app.goo.gl/Fv58PhtjYf9yJnxt9" target="_blank">(5-minute walk from the conference venue)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Day 2 – Tuesday, August 26</h2>
+<table class="schedule-table">
+  <thead>
+    <tr>
+      <th class="time-column">Time</th>
+      <th class="session-column">Session</th>
+      <th class="details-column">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="keynote">
+      <td class="time-column">09:00–10:00</td>
+      <td class="session-column" colspan="2"><span class="long-paper"> <a href="keynotes.html#keynote2">Keynote Talk #2 - Mapping Cultural Values Across Regions for AI Alignment</a></span>Prof. Xing Xie (Microsoft Research Asia)<span class="author">Session Chair: Raymond Chi-Wing Wong, The Hong Kong University of Science and Technology, Hong Kong </span></td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">10:00–10:20</td>
+      <td class="social-event" colspan="2">Coffee Break</td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">10:20–11.00</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s4">Session 4 - Road Networks</a></span><span class="author">Session Chair: Aamir Cheema, Monash University, Australia</span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-14.pdf" target="_blank">BRkNN-light: Batch Processing of Reverse k-Nearest Neighbor Queries for Moving Objects on Road Networks</a></span> 
+        <span class="author">Anbang Song (Yantai University); Ziqiang Yu (Yantai University); Wei Liu (Yantai University); Yating Xu (Yantai University); Mingjin Tao (Yantai University) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-5.pdf" target="_blank">The Batch Insertion Operator for Shared Mobility Route Planning on Time-Dependent Road Networks</a></span> 
+        <span class="author">Aaditya Mukherjee (University of Victoria); Sean Chester (University of Victoria); Mario Nascimento (Northeastern University) - LONG</span>
+
+      </td>
+    </tr>
+    <tr class="tutorial">
+      <td class="time-column">11:00–12:25</td>
+      <td class="session-column" colspan="2">
+        <span class="long-paper"><a href="tutorials.html#t3">Tutorial 3 - LLMs Meet Cross-Modal Time Series Analytics: Overview and Directions</a></span>
+        <span class="author">Chenxi Liu (Nanyang Technological University)*; Hao Miao (Hong Kong Polytechnic University); Cheng Long (Nanyang Technological University); Yan Zhao (University of Electronic Science and Technology of China); Ziyue Li (Technical University of Munich); Panos Kalnis (King Abdullah University of Science and Technology)</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">12:25–13:25</td>
+      <td class="social-event" colspan="2">Lunch Break</td>
+    </tr>
+    <tr class="tutorial">
+      <td class="time-column">13:25–14:50</td>
+      <td class="session-column" colspan="2">
+        <span class="long-paper"><a href="tutorials.html#t4">Tutorial 4 - Learning from Spatio-Temporal Data in the LLM Era: Foundations, Models, and Emerging Trends</a></span>
+        <span class="author">Zijian Zhang (Jilin University )*; Xiao Han (City University of Hong Kong); Xiangyu Zhao (City University of Hong Kong); Chenjuan Guo (East China Normal University); Bin Yang (East China Normal University)</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">14:50–15:50</td>
+      <td class="social-event" colspan="2">Demo & Coffee Break (<a href="papers.html#demo">Live demos</a> and refreshments)</td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">15:50–17:40</td>
+      <td class="session-column"><span class="session-title">Ph.D. Forum</span><p>
+        [2 mentors presentation + 9 Talks]</p><div style="display:block;margin-top:1em;">Mentor: Mario Nascimento (Northeastern University, Canada)</div><div style="display:block;margin-top:1em;">
+Mentor: Hua Lu (Aalborg University, Denmark)</div></td>
+      <td class="details-column">
+         
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-24.pdf" target="_blank">Towards Advanced Natural Language Interfaces for Moving Objects Databases</a></span> 
+<span class="author">Xieyang Wang (Nanjing University of Aeronautics and Astronautics); Jianqiu Xu (Nanjing University of Aeronautics and Astronautics)*</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-25.pdf" target="_blank">CA-Gen: Trajectory Generation with Co-Movement Awareness</a></span> 
+<span class="author">Ke Li (UESTC)*; Ziwen Chen (UESTC); Yoshiharu Ishikawa (Nagoya University)</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-31.pdf" target="_blank">Optimization of Exposure-Aware Routing for Vehicles and Pedestrians</a></span> 
+<span class="author">Gurban Aliyev (University of Pisa)*</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-27.pdf" target="_blank">Lightweight Safety Assistance System for E-Scooters: Current Results and Future Directions</a></span> 
+<span class="author">Congzhi Ren (University of Osaka)*</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-32.pdf" target="_blank">Device-Independent Wireless Sensing: Time-Series Analysis of Continuous Round Trip Time for Indoor Environment</a></span> 
+<span class="author">Haruki Yonekura (Osaka University)*; Hamada Rizk (The University of Osaka/ Tanta University/ RIKEN Center for Computational Science); Hirozumi Yamaguchi (The University of Osaka/ RIKEN Center for Computational Science)</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-26.pdf" target="_blank">A Spatiotemporal Framework for Underwater Noise Modelling</a></span> 
+<span class="author">Giulia Rovinelli  (Ca' Foscari University of Venice)*</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-29.pdf" target="_blank">Entropy-based Pre-filtering of High-density Forest Point Clouds for Individual Tree Detection Algorithms</a></span> 
+<span class="author">Kasparas Karlauskas (Vilnius University )*; Povilas Treigys (Vilnius University)</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-28.pdf" target="_blank">No Labels, No Problem: Adaptive Disaster Prediction Using Physics-Hybrid AI</a></span> 
+<span class="author">Ren Ozeki (Osaka university)*; Hamada Rizk (The University of Osaka); Hirozumi Yamaguchi (The University of Osaka)</span>
+<span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-30.pdf" target="_blank">LLM-Powered Embodied Intelligence for Socially-Aware Robot Navigation in Human-Robot Interaction</a></span> 
+<span class="author">Xuqing Liu (The University of Osaka)*; Ahmed Farid (Waseda University); Tatsuya Amano (The University of Osaka); Hamada Rizk (The University of Osaka); Hirozumi Yamaguchi (The University of Osaka)</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">18:45–21:00</td>
+      <td class="social-event" colspan="2">
+        <p>Banquet Dinner (with the award presentation) at RIHGA ROYAL HOTEL (2/F "Diamond Room")</p>
+        <p class="location">Address: 5 Chome-3-68 Nakanoshima, Kita Ward, Osaka, 530-0005, Japan
+        <a href="https://maps.app.goo.gl/2pCEzexzYqFk87Pk9" target="_blank">(6-minute walk from the conference venue)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Day 3 – Wednesday, August 27</h2>
+<table class="schedule-table">
+  <thead>
+    <tr>
+      <th class="time-column">Time</th>
+      <th class="session-column">Session</th>
+      <th class="details-column">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="default">
+      <td class="time-column">09:00–10:20</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s5">Session 5 - Mobility Analysis and Industry</a></span><span class="author">Session Chair: Gabriel Spadon, Dalhousie University, Canada</span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-17.pdf" target="_blank">Scalable Processing of Moving Flock Patterns</a></span> 
+        <span class="author">Andres Oswaldo Calderon Romero (Pontificia Universidad Javeriana); Vassilis J. Tsotras (University of California); Petko Balakov (Esri); Marcos Vieira (Google) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-4.pdf" target="_blank">Generalized Origin-Destination-Time Flow Patterns</a></span> 
+        <span class="author">Chrysanthi Kosyfaki (The University of Hong Kong ); Nikos Mamoulis (University of Ioannina); Reynold Cheng (The University of Hong Kong); Ben Kao (The University of Hong Kong) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-9.pdf" target="_blank">Private Next Location Prediction using Transformers: Enhancing Accuracy under Differential Privacy Constraints</a></span> <span class="author">Andrei Ouatu (Politehnica University Bucharest); Gabriel Ghinita (Hamad Bin Khalifa University); Razvan Rughinis (Politehnica University Bucharest) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-18.pdf" target="_blank">Target and Non-target Category Classification from GPS and Check-in Data</a></span> <span class="author">Ryo Shirai (The University of Osaka); Ryo Imai (LY Coorporation); Daichi Amagata (Osaka University) - LONG</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">10:20-10:40</td>
+      <td class="social-event" colspan="2">Coffee Break</td>
+    </tr>
+    <tr class="tutorial">
+      <td class="time-column">10:40-12:05</td>
+      <td class="session-column" colspan="2">
+      
+        <span class="long-paper"><a href="tutorials.html#t5">Tutorial 5 - Towards Foundation Model for Spatiotemporal Data Analysis</a></span>
+        <span class="author">Yuankai Wu (Sichuan University)*; Dingyi Zhuang (Massachusetts Institute of Technology); Xinyu Chen (Massachusetts Institute of Technology)</span>
+      </td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">12:05–13:05</td>
+      <td class="social-event" colspan="2">Lunch Break</td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">13:05-14:05</td>
+      <td class="session-column"><span class="session-title"><a href="session_detail.html#s6">Session 6 - Time Series and Interval Data</a></span><span class="author">Session Chair: Mario Nascimento, Northeastern University, Canada </span></td>
+      <td class="details-column">
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-6.pdf" target="_blank">ReefsDB: An Efficient Design and Implementation of Time-Series Store on SSDs</a></span>  
+        <span class="author">Shuai Liu (The Institute of Software, Chinese Academy of Sciences (ISCAS)); Ying Qiao (The Institute of Software, Chinese Academy of Sciences (ISCAS)); Chang Leng (The Institute of Software, Chinese Academy of Sciences (ISCAS)); Hongan Wang (The Institute of Software, Chinese Academy of Sciences (ISCAS)) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-8.pdf" target="_blank">TIDE: Indexing Time Intervals by Duration and Endpoint</a></span> 
+        <span class="author">Kai Wang (HKUST); Moin Moti (HKUST); Dimitris Papadias (HKUST) - LONG</span>
+        <span class="long-paper"><a href="https://d2vccesz85z2gp.cloudfront.net/proceedings/sstd25-1.pdf" target="_blank">Top-k Range Search on Weighted Interval Data</a></span> <span class="author">Daichi Amagata (Osaka University); Jimin Lee (The University of Osaka) - LONG</span>
+      </td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">14:05–15:20</td>
+      <td class="session-column" colspan="2"><span class="long-paper"><a href="panel.html#panel1">Panel Discussion - My Classic Papers in Spatial and Spatiotemporal Data</a></span></td>
+    </tr>
+    <tr class="default">
+      <td class="time-column">15:20–15:30</td>
+      <td class="session-column" colspan="2">Closing Remarks</td>
+      
+    </tr>
+    <tr class="social">
+      <td class="time-column">15:30–15:45</td>
+      <td class="social-event" colspan="2">Gathering (Group photo and wait for bus)</td>
+    </tr>
+    <tr class="social">
+      <td class="time-column">16:00–21:40</td>
+      <td class="social-event">
+        <p>EXPO 2025 Excursion: Transportation & Visit (Without Guide)</p></td>
+         <td class="details-column">
+        <ul>
+          <li><span style="font-weight: bold;">Bus leaves conference venue  at 4pm</span> (arrives at Expo at ~4:40pm)</li>
+          <li>Free time within the Expo area</li>
+          
+          <li><span style="font-weight: bold;">Bus leaves Expo at 9pm</span> (arrives back at the conference venue at ~9:40pm)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+				</div>
+			</header>
+			
+			</section>
+		
+		
+		<!-- Footer -->
+			<section id="footer">
+				<div class="copyright">
+					<ul class="menu">
+						<!--<li>Photo: <a href="https://de.wikipedia.org/w/index.php?title=Benutzer:Thomas_Ledl">Thomas Ledl</a>/CC-BY-SA 4.0</li>-->
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+										<p>
