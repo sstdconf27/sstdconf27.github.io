@@ -1,0 +1,17 @@
+{%- comment -%}
+	Program committees, one heading per track. Content: _data/program_committee.yml
+	Nothing is shown while that file has no entries.
+{%- endcomment -%}
+{%- assign tracks = site.data.program_committee -%}
+{%- if tracks and tracks.size > 0 %}
+<h2 id="committees">Program Committees</h2>
+{%- for track in tracks %}
+<h4>{{ track.track }}</h4>
+<p>
+{%- for member in track.members %}
+{{ member }}<br />
+{%- endfor %}
+</p>
+<br />
+{%- endfor %}
+{%- endif %}

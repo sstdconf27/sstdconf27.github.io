@@ -1,0 +1,28 @@
+# =============================================================================
+#  ORGANIZERS  (shown on officers.html)
+#
+#  The page shows "Coming soon." for as long as this file has no entries.
+#  Roles appear in the order they are written here.
+#
+#    role          heading, e.g. "General Co-chairs"
+#    name          person's name
+#    affiliation   shown in brackets after the name
+#    url           optional - personal web page; the name becomes a link
+#
+#  EXAMPLE - copy the lines below to the bottom of the file, remove the
+#  leading "# " from each line, and replace the placeholder text:
+#
+# - role: "General Co-chairs"
+#   people:
+#     - name: "Jane Doe"
+#       affiliation: "Example University, USA"
+#       url: "https://www.example.edu/~jdoe"
+#     - name: "John Smith"
+#       affiliation: "Sample Institute of Technology, Canada"
+#
+# - role: "Program Committee Co-chairs"
+#   people:
+#     - name: "Alex Lee"
+#       affiliation: "Example Research Lab, Singapore"
+#       url: "https://www.example.org/alex"
+# =============================================================================

@@ -1,0 +1,25 @@
+{%- comment -%} One headed section of logos per group. Content: _data/sponsors.yml {%- endcomment -%}
+{%- for group in site.data.sponsors %}
+	<section id="{{ group.group | slugify }}" class="main">
+		<header>
+			<div class="container">
+				<h2>{{ group.group }}</h2>
+			</div>
+		</header>
+		<div class="content style4">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="sponsor-logos">
+{%- for logo in group.logos %}
+							<a href="{{ logo.url }}" target="_blank" rel="noopener noreferrer">
+								<img src="{{ logo.image | relative_url }}" alt="{{ logo.name }}" style="max-height: {{ logo.height | default: 85 }}px;">
+							</a>
+{%- endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{%- endfor %}

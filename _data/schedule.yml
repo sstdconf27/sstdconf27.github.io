@@ -1,0 +1,61 @@
+# =============================================================================
+#  DETAILED PROGRAM  (shown on program_full_detail.html)
+#
+#  The page shows "Coming soon." for as long as this file has no entries.
+#  Each "- day:" block becomes one table; each "- time:" block is one row.
+#
+#  Every row has:
+#    time      e.g. "09:00-10:00"
+#    title     what happens
+#  and may have:
+#    type      row colour: keynote (yellow), tutorial (green), social (pink,
+#              for breaks / meals / receptions). Leave out for a white row.
+#    link      page the title links to, e.g. "/keynotes.html#keynote1"
+#    speaker   speaker or presenters, shown after the title
+#    chair     session chair
+#    note      small grey line under the title, e.g. a room or an address
+#    papers    list of talks in a paper session, each with
+#                title, authors, and optionally url (PDF) and length (LONG/SHORT)
+#
+#  EXAMPLE - copy the lines below to the bottom of the file, remove the
+#  leading "# " from each line, and replace the placeholder text:
+#
+# - day: "Day 1 - Monday, August 23"
+#   rows:
+#     - time: "09:00-09:45"
+#       title: "Registration"
+#
+#     - time: "09:45-10:45"
+#       type: keynote
+#       title: "Keynote Talk #1 - Title of the Keynote Talk"
+#       link: "/keynotes.html#keynote1"
+#       speaker: "Prof. Jane Doe (Example University)"
+#       chair: "John Smith, Sample Institute of Technology, Canada"
+#
+#     - time: "10:45-11:05"
+#       type: social
+#       title: "Coffee Break"
+#
+#     - time: "11:05-12:30"
+#       title: "Session 1 - Name of the Session"
+#       chair: "Alex Lee, Example Research Lab, Singapore"
+#       papers:
+#         - title: "Title of the First Paper"
+#           authors: "Jane Doe (Example University); John Smith (Sample Institute of Technology)"
+#           url: "https://www.example.org/paper1.pdf"
+#           length: "LONG"
+#         - title: "Title of the Second Paper"
+#           authors: "Alex Lee (Example Research Lab)"
+#           length: "SHORT"
+#
+#     - time: "14:00-15:30"
+#       type: tutorial
+#       title: "Tutorial 1 - Title of the Tutorial"
+#       link: "/tutorials.html"
+#       speaker: "Jane Doe (Example University); Alex Lee (Example Research Lab)"
+#
+#     - time: "18:30-21:00"
+#       type: social
+#       title: "Welcome Reception"
+#       note: "Name of the place, 123 Example Street (5-minute walk from the venue)"
+# =============================================================================

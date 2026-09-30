@@ -1,0 +1,14 @@
+{%- comment -%} Table of deadlines. Content: _data/important_dates.yml {%- endcomment -%}
+<table class="dates-table">
+<tbody>
+{%- for item in site.data.important_dates %}
+<tr>
+<td>{{ item.label }}</td>
+{%- if item.date and item.date != "" %}
+<td>{% if item.old_date and item.old_date != "" %}<s>{{ item.old_date }}</s><br />{% endif %}{{ item.date }}</td>
+{%- endif %}
+</tr>
+{%- endfor %}
+</tbody>
+</table>
+<p class="timezone-note">Deadlines refer to 23:59 in the AoE (Anywhere on Earth) time zone.</p>

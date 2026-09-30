@@ -1,0 +1,29 @@
+{%- comment -%}
+	Menus. The links come from _data/navigation.yml; the highlighted button and
+	the grey sub-menu are chosen by the "menu:" line of the page being shown.
+{%- endcomment -%}
+{%- assign current_menu = site.data.navigation | where: "id", page.menu | first %}
+	<nav id="nav">
+		<ul class="container">
+{%- for item in site.data.navigation %}
+			<li><a {% if item.id == page.menu %}class="active" {% endif %}href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+{%- endfor %}
+		</ul>
+	</nav>
+{%- if current_menu.children %}
+
+	<nav id="subnav">
+		<ul class="container">
+{%- for child in current_menu.children %}
+{%- if child.shown_when %}
+{%- assign needed_list = site.data[child.shown_when] %}
+{%- unless needed_list and needed_list.size > 0 %}{% continue %}{% endunless %}
+{%- endif %}
+{%- assign first_char = child.url | slice: 0 %}
+			<li><a {% if child.url == page.url %}class="active" {% endif %}href="{% if first_char == '#' %}{{ child.url }}{% else %}{{ child.url | relative_url }}{% endif %}">{{ child.title }}</a></li>
+{%- endfor %}
+		</ul>
+	</nav>
+
+	<p>&nbsp;</p>
+{%- endif %}

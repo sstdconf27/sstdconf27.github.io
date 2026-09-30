@@ -1,0 +1,21 @@
+---
+layout: page
+title: Detailed Program
+heading: Conference Program
+menu: program
+permalink: /program_full_detail.html
+---
+{% comment %}
+	DETAILED PROGRAM PAGE
+
+	The timetable comes from _data/schedule.yml, which starts with an example
+	to copy. While that file is empty the page shows "Coming soon." instead.
+
+	General notes (room, registration desk hours, ...) can be written as
+	ordinary HTML above the "include" line, for example:
+
+	    <p><strong>Conference venue:</strong> Room 101, Example Hall.<br />
+	    <strong>Registration desk:</strong> open daily from 9am to 5pm.</p>
+{% endcomment %}
+
+{% include blocks/schedule.html %}

@@ -1,0 +1,20 @@
+{%- comment -%}
+	Photo banner with the conference name. All text comes from _config.yml.
+	The home page shows it full height; every other page shows a shorter one.
+{%- endcomment %}
+	<section id="header" class="dark{% unless page.url == '/' %} compact{% endunless %}" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('{{ site.banner_image | relative_url }}');">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-12-narrow">
+						<header>
+							<h1>{{ site.conference.edition }} {{ site.conference.name }}</h1>
+							<p>{{ site.conference.dates }}<br />
+								{{ site.conference.venue }}<br />
+								{{ site.conference.location }}</p>
+						</header>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,15 @@
+{%- comment -%} Organizing committee, one heading per role. Content: _data/organizers.yml {%- endcomment -%}
+{%- assign roles = site.data.organizers -%}
+{%- if roles and roles.size > 0 %}
+{%- for role in roles %}
+<header><h4>{{ role.role }}</h4></header>
+<p>
+{%- for person in role.people %}
+{% if person.url and person.url != "" %}<a href="{{ person.url }}" target="_blank" rel="noopener">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}{% if person.affiliation and person.affiliation != "" %} ({{ person.affiliation }}){% endif %}<br />
+{%- endfor %}
+</p>
+<br />
+{%- endfor %}
+{%- else %}
+{% include blocks/coming-soon.html %}
+{%- endif %}

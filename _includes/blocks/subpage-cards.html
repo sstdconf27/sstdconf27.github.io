@@ -1,0 +1,15 @@
+{%- comment -%}
+	One card (linked title + description) for every sub-page of the current
+	menu, as listed under "children" in _data/navigation.yml.
+{%- endcomment -%}
+{%- assign current_menu = site.data.navigation | where: "id", page.menu | first -%}
+<div class="row subpage-cards">
+{%- for child in current_menu.children %}
+<div class="col-6 col-12-narrow">
+<section>
+<h3><a href="{{ child.url | relative_url }}">{{ child.title }}</a></h3>
+<p>{{ child.description }}</p>
+</section>
+</div>
+{%- endfor %}
+</div>

@@ -1,0 +1,99 @@
+# =============================================================================
+#  MENUS
+#
+#  Each "- id:" block is one button in the dark menu bar at the top.
+#  Its "children" are the links in the grey bar underneath, shown on every
+#  page that belongs to that menu (a page belongs to a menu when its
+#  "menu:" line matches the id here).
+#
+#    id           short name that pages refer to with "menu: <id>"
+#    title        text shown in the menu
+#    url          address of the page (must match the page's "permalink:")
+#    description  one-line summary shown under the link on the overview page
+#                 of the menu (attend.html, program.html, calls.html)
+#    shown_when   optional - name of a _data/ file (without ".yml"); the link
+#                 stays hidden for as long as that file has no entries
+#
+#  EXAMPLE - adding a "Student Travel Grants" page to the Attend menu:
+#
+#      - title: "Travel Grants"
+#        url: /grants.html
+#        description: "Support for student attendees and how to apply."
+# =============================================================================
+
+- id: home
+  title: "Home"
+  url: /
+
+- id: organizers
+  title: "Organizers"
+  url: /officers.html
+  children:
+    - title: "Organizers"
+      url: "#organizers"
+    # Appears by itself once _data/program_committee.yml has entries.
+    - title: "Program Committees"
+      url: "#committees"
+      shown_when: program_committee
+
+- id: calls
+  title: "Call for Papers / Tutorials"
+  url: /calls.html
+  # When the calls are ready to be published, remove the "# " in front of the
+  # lines below. The three calls then appear in the grey bar and on calls.html.
+  # children:
+  #   - title: "Research / Demo / Industry Tracks"
+  #     url: /callResearchs.html
+  #     description: "Call for Research / Demo / Industry Track Papers."
+  #   - title: "Thesis and Dissertation Workshop"
+  #     url: /callThesis.html
+  #     description: "Call for Thesis and Dissertation Workshop Track Papers."
+  #   - title: "Tutorials"
+  #     url: /callTutorials.html
+  #     description: "Call for Tutorial Proposals."
+
+- id: program
+  title: "Program"
+  url: /program.html
+  children:
+    - title: "Detailed Program"
+      url: /program_full_detail.html
+      description: "Coming soon."
+    - title: "Keynotes"
+      url: /keynotes.html
+      description: "Coming soon."
+    - title: "Accepted Papers"
+      url: /papers.html
+      description: "Coming soon."
+    - title: "Accepted Tutorials"
+      url: /tutorials.html
+      description: "Coming soon."
+    - title: "Awards"
+      url: /awards.html
+      description: "Coming soon."
+    - title: "Panel"
+      url: /panel.html
+      description: "Coming soon."
+
+- id: attend
+  title: "Attend"
+  url: /attend.html
+  children:
+    - title: "Registration"
+      url: /registration.html
+      description: "Coming Soon"
+    - title: "Venue"
+      url: /venue.html
+      description: "Coming Soon"
+    - title: "Travel"
+      url: /travel.html
+      description: "Coming Soon"
+    - title: "Visa"
+      url: /visa.html
+      description: "Coming Soon"
+    - title: "Accommodation"
+      url: /accommodation.html
+      description: "Coming Soon"
+    - title: "Attractions"
+      url: /attractions.html
+      description: "Coming Soon"

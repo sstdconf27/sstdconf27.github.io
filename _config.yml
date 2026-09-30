@@ -1,0 +1,36 @@
+# =============================================================================
+#  SITE-WIDE SETTINGS
+#
+#  Everything in this file appears on EVERY page (browser title, photo banner,
+#  home page). Change a value here once and the whole site follows.
+#
+#  NOTE: `jekyll serve` does not reload this file automatically.
+#        Stop it (Ctrl+C) and start it again after editing.
+# =============================================================================
+
+title: "SSTD 2027"                        # short name, used in browser tabs
+description: "SSTD 2027 - 20th International Symposium on Spatial and Temporal Data, North Carolina State University, Raleigh, North Carolina, USA."
+url: "https://sstdconf27.github.io"       # public address of the site (no trailing slash)
+baseurl: ""
+
+conference:
+  edition:  "20th"
+  name:     "International Symposium on Spatial and Temporal Data"
+  dates:    "TBD"                         # e.g. "August 23-25, 2027"
+  venue:    "North Carolina State University"
+  location: "Raleigh, North Carolina, United States of America"
+
+# Photo shown behind the conference name at the top of every page.
+banner_image: "/images/Yates_Raleigh.jpeg"
+
+# Browser-tab icon. Leave empty until a file such as images/favicon.ico exists.
+favicon: ""
+
+# -----------------------------------------------------------------------------
+#  Build settings - you normally never need to touch anything below this line.
+# -----------------------------------------------------------------------------
+markdown: kramdown
+
+# Files that are part of the project but not of the published site.
+exclude:
+  - README.md

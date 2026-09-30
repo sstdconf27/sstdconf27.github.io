@@ -1,0 +1,30 @@
+# =============================================================================
+#  KEYNOTES  (shown on keynotes.html)
+#
+#  The page shows "Coming soon." for as long as this file has no entries.
+#  Keynotes are numbered automatically in the order they are written here, and
+#  can be linked to as /keynotes.html#keynote1, /keynotes.html#keynote2, ...
+#
+#    title         title of the talk
+#    speaker       speaker's name
+#    affiliation   shown in brackets after the name
+#    url           optional - speaker's web page; the name becomes a link
+#    photo         optional - portrait; put the file in the images/ folder
+#    abstract      text after "abstract: >" may run over several lines, as
+#    bio           long as every line starts with four spaces
+#
+#  EXAMPLE - copy the lines below to the bottom of the file, remove the
+#  leading "# " from each line, and replace the placeholder text:
+#
+# - title: "Title of the Keynote Talk"
+#   speaker: "Jane Doe"
+#   affiliation: "Example University"
+#   url: "https://www.example.edu/~jdoe"
+#   photo: "/images/keynote-jane-doe.jpg"
+#   abstract: >
+#     First sentence of the abstract. The abstract can be as long as needed
+#     and may continue over as many lines as you like.
+#   bio: >
+#     Jane Doe is a professor at Example University. Her research focuses on
+#     spatial and temporal data management.
+# =============================================================================

@@ -1,0 +1,76 @@
+---
+layout: default
+title: Home
+menu: home
+permalink: /
+---
+{% comment %}
+	HOME PAGE
+
+	Edit here:        the "About" text and the "Location" sentence below.
+	Edit elsewhere:   Important Dates  ->  _data/important_dates.yml
+	                  News             ->  _data/news.yml
+	                  Sponsors         ->  _data/sponsors.yml
+	                  name, dates, venue, city  ->  _config.yml
+{% endcomment %}
+
+	<section id="about" class="main">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-12-narrow">
+						<h2>About</h2>
+						<section>
+							<p>
+								The <strong>{{ site.conference.name }} (SSTD)</strong>
+								has a long and distinguished history as a premier forum for researchers, practitioners,
+								and industry leaders to present and discuss spatial and temporal data management innovations.
+								Since its inception in 1989, SSTD has been at the forefront of advancing foundational theories,
+								systems, and applications that address the challenges of handling spatial and temporal information.
+								Over the years, the symposium has played a pivotal role in fostering research that has shaped the evolution
+								of spatial databases, geospatial computing, and spatio-temporal analytics.
+								<strong>The {{ site.conference.edition }} edition of SSTD</strong> continues this tradition while broadening its focus to
+								explore the full lifecycle of spatial and temporal data, reflecting the growing importance of these
+								data types in an era of big data, AI, and ubiquitous computing.
+							</p>
+							<p>
+								All accepted papers will be published in the {{ site.title }} proceedings by ACM.
+							</p>
+						</section>
+					</div>
+					<div class="col-6 col-12-narrow">
+						<h2>Important Dates</h2>
+						<section>
+							{% include blocks/important-dates.html %}
+						</section>
+						<h2>Location</h2>
+						<section>
+							<p>
+								{{ site.title }} will be held in {{ site.conference.venue }}, {{ site.conference.location }},
+								{{ site.conference.dates }}.
+							</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="news" class="main">
+		<header>
+			<div class="container">
+				<h2>News</h2>
+			</div>
+		</header>
+		<div class="content style4">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						{% include blocks/news.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% include blocks/sponsors.html %}

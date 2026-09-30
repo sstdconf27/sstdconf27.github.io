@@ -1,0 +1,32 @@
+# =============================================================================
+#  IMPORTANT DATES  (shown on the home page)
+#
+#    label      what the deadline is
+#    date       the date; leave it as "" while it is not decided yet
+#    old_date   optional - the previous date, shown crossed out when a
+#               deadline has been extended
+#
+#  EXAMPLE - a decided date, and an extended one:
+#
+#      - label: "Notification date"
+#        date: "July 1, 2027"
+#
+#      - label: "Paper submission deadline"
+#        date: "May 18, 2027"
+#        old_date: "May 4, 2027"
+# =============================================================================
+
+- label: "Abstract submission (Research / Demo / Industry tracks)"
+  date: ""
+
+- label: "Paper submission deadline (Research / Demo / Industry tracks)"
+  date: ""
+
+- label: "Thesis and Dissertation Workshop track submission deadline"
+  date: ""
+
+- label: "Notification date"
+  date: ""
+
+- label: "Camera-ready"
+  date: ""

@@ -1,0 +1,63 @@
+{%- comment -%}
+	Day-by-day programme, one table per day. Content: _data/schedule.yml
+	A row with "papers" is a paper session (session | list of talks); every
+	other row spans both columns.
+{%- endcomment -%}
+{%- assign days = site.data.schedule -%}
+{%- if days and days.size > 0 %}
+<div class="schedule">
+{%- for day in days %}
+<h3>{{ day.day }}</h3>
+<table class="schedule-table">
+	<thead>
+		<tr>
+			<th class="time-column">Time</th>
+			<th class="session-column">Session</th>
+			<th class="details-column">Details</th>
+		</tr>
+	</thead>
+	<tbody>
+{%- for row in day.rows %}
+{%- capture row_title %}{% if row.link and row.link != "" %}<a href="{{ row.link | relative_url }}">{{ row.title }}</a>{% else %}{{ row.title }}{% endif %}{% endcapture %}
+		<tr class="{{ row.type | default: 'default' }}">
+			<td class="time-column">{{ row.time }}</td>
+{%- if row.papers %}
+			<td class="session-column">
+				<span class="session-title">{{ row_title }}</span>
+{%- if row.chair %}
+				<span class="author">Session Chair: {{ row.chair }}</span>
+{%- endif %}
+			</td>
+			<td class="details-column">
+{%- for paper in row.papers %}
+				<span class="long-paper">{% if paper.url and paper.url != "" %}<a href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</span>
+				<span class="author">{{ paper.authors }}{% if paper.length and paper.length != "" %} - {{ paper.length }}{% endif %}</span>
+{%- endfor %}
+			</td>
+{%- else %}
+			<td class="{% if row.type == 'social' %}social-event{% else %}session-column{% endif %}" colspan="2">
+{%- if row.type == "keynote" or row.type == "tutorial" %}
+				<span class="long-paper">{{ row_title }}</span>
+{%- else %}
+				{{ row_title }}
+{%- endif %}
+{%- if row.speaker %}
+				{{ row.speaker }}
+{%- endif %}
+{%- if row.chair %}
+				<span class="author">Session Chair: {{ row.chair }}</span>
+{%- endif %}
+{%- if row.note %}
+				<p class="location">{{ row.note }}</p>
+{%- endif %}
+			</td>
+{%- endif %}
+		</tr>
+{%- endfor %}
+	</tbody>
+</table>
+{%- endfor %}
+</div>
+{%- else %}
+{% include blocks/coming-soon.html %}
+{%- endif %}

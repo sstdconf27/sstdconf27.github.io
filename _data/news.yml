@@ -1,0 +1,16 @@
+# =============================================================================
+#  NEWS  (shown on the home page)
+#
+#  Add the NEWEST item at the TOP of the list.
+#
+#    date   shown in brackets in front of the text
+#    text   the announcement. Links are written [visible text](address).
+#
+#  EXAMPLE:
+#
+#      - date: "Jan 15, 2027"
+#        text: "The [Call for Papers](/calls.html) is now available."
+# =============================================================================
+
+- date: "Sept, 26, 2026"
+  text: "Website Setup"

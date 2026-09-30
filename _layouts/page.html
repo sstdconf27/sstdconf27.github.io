@@ -1,0 +1,17 @@
+---
+layout: default
+---
+	<section id="{{ page.menu }}" class="main">
+		<header>
+			<div class="container">
+				<h2>{{ page.heading | default: page.title }}</h2>
+			</div>
+		</header>
+		<div class="content style4">
+			<div class="container page-content">
+
+{{ content }}
+
+			</div>
+		</div>
+	</section>

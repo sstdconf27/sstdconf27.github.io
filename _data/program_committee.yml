@@ -1,0 +1,21 @@
+# =============================================================================
+#  PROGRAM COMMITTEES  (shown on officers.html, below the organizers)
+#
+#  The "Program Committees" part of the page stays hidden for as long as this
+#  file has no entries.
+#
+#    track     heading, e.g. "Research Track"
+#    members   one line per person, written as "Name (Affiliation)"
+#
+#  EXAMPLE - copy the lines below to the bottom of the file, remove the
+#  leading "# " from each line, and replace the placeholder text:
+#
+# - track: "Research Track"
+#   members:
+#     - "Jane Doe (Example University)"
+#     - "John Smith (Sample Institute of Technology)"
+#
+# - track: "Industry and Demo Track"
+#   members:
+#     - "Alex Lee (Example Research Lab)"
+# =============================================================================

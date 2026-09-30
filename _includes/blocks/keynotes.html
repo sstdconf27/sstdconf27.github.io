@@ -1,0 +1,29 @@
+{%- comment -%} Keynote talks: photo on the left, details on the right. Content: _data/keynotes.yml {%- endcomment -%}
+{%- assign keynotes = site.data.keynotes -%}
+{%- if keynotes and keynotes.size > 0 %}
+{%- for keynote in keynotes %}
+<div class="row keynote">
+	<div class="col-2 col-12-narrow">
+{%- if keynote.photo and keynote.photo != "" %}
+		<section class="keynote-photo">
+			<img src="{{ keynote.photo | relative_url }}" alt="{{ keynote.speaker }}">
+		</section>
+{%- endif %}
+	</div>
+	<div class="col-10 col-12-narrow">
+		<section>
+			<h4 id="keynote{{ forloop.index }}">Keynote {{ forloop.index }} - {{ keynote.title }}</h4>
+			<p><strong>Speaker:</strong> {% if keynote.url and keynote.url != "" %}<a href="{{ keynote.url }}" target="_blank" rel="noopener">{{ keynote.speaker }}</a>{% else %}{{ keynote.speaker }}{% endif %}{% if keynote.affiliation and keynote.affiliation != "" %} ({{ keynote.affiliation }}){% endif %}</p>
+{%- if keynote.abstract %}
+			<p><strong>Abstract:</strong> {{ keynote.abstract }}</p>
+{%- endif %}
+{%- if keynote.bio %}
+			<p><strong>Biography:</strong> {{ keynote.bio }}</p>
+{%- endif %}
+		</section>
+	</div>
+</div>
+{%- endfor %}
+{%- else %}
+{% include blocks/coming-soon.html %}
+{%- endif %}
