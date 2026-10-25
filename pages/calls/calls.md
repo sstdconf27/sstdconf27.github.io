@@ -19,4 +19,6 @@ permalink: /calls.html
 	         SSTD 2027 solicits submissions in the following tracks.
 {% endcomment %}
 
-{% include blocks/coming-soon.html %}
+SSTD 2027 solicits submissions in the following tracks.
+
+{% include blocks/subpage-cards.html %}

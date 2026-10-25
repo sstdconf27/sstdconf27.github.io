@@ -16,17 +16,29 @@
 #        old_date: "May 4, 2027"
 # =============================================================================
 
-- label: "Abstract submission (Research / Demo / Industry tracks)"
-  date: ""
+- label: "Round 1 — Abstract submission"
+  date: "November 29, 2026"
 
-- label: "Paper submission deadline (Research / Demo / Industry tracks)"
-  date: ""
+- label: "Round 1 — Paper submission deadline"
+  date: "December 6, 2026"
+
+- label: "Round 1 — Notification"
+  date: "January 2027 (TBD)"
+
+- label: "Round 2 — Abstract submission"
+  date: "April 4, 2027"
+
+- label: "Round 2 — Paper submission deadline"
+  date: "April 11, 2027"
+
+- label: "Round 2 — Notification"
+  date: "June 2027 (TBD)"
 
 - label: "Thesis and Dissertation Workshop track submission deadline"
-  date: ""
-
-- label: "Notification date"
-  date: ""
+  date: "June 2027 (TBD)"
 
 - label: "Camera-ready"
-  date: ""
+  date: "July 2027 (TBD)"
+
+- label: "Conference"
+  date: "August 2027 (TBD)"

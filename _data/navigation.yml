@@ -38,13 +38,16 @@
 
 - id: calls
   title: "Call for Papers / Tutorials"
-  url: /calls.html
-  # When the calls are ready to be published, remove the "# " in front of the
-  # lines below. The three calls then appear in the grey bar and on calls.html.
-  # children:
-  #   - title: "Research / Demo / Industry Tracks"
-  #     url: /callResearchs.html
-  #     description: "Call for Research / Demo / Industry Track Papers."
+  # The menu button opens the research call directly. Once the Thesis and
+  # Tutorials calls are published as well, change this back to /calls.html so
+  # the button opens the overview page listing all calls.
+  url: /callResearchs.html
+  # When the other calls are ready to be published, remove the "# " in front of
+  # their lines below. They then appear in the grey bar and on calls.html.
+  children:
+    - title: "Research / Demo / Industry / Vision Tracks"
+      url: /callResearchs.html
+      description: "Call for Research / Demo / Industry / Vision Track Papers."
   #   - title: "Thesis and Dissertation Workshop"
   #     url: /callThesis.html
   #     description: "Call for Thesis and Dissertation Workshop Track Papers."

@@ -26,6 +26,17 @@
 		margin: 2em 0 1em 0;
 	}
 
+	/* Keep heading margins inside the white content area; otherwise a page
+	   starting with "## Heading" shows a strip of grey page background
+	   between the title and the content. */
+	.main > .content.style4 {
+		display: flow-root;
+	}
+
+	.page-content > h2:first-child {
+		margin-top: 0;
+	}
+
 	.page-content > * + .row {
 		margin-top: 0;
 	}
