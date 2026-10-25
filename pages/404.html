@@ -1,0 +1,57 @@
+---
+layout: page
+title: Page Not Found
+permalink: /404.html
+sitemap: false
+---
+{% comment %}
+	PAGE NOT FOUND
+
+	GitHub Pages shows this page for every address that does not exist.
+	It first tries to send the visitor to the right page:
+	  - old addresses listed in _data/redirects.yml;
+	  - existing pages typed slightly differently (capital letters, no
+	    ".html", a "/" at the end).
+	Otherwise it shows the message below. Nothing here needs editing; to add
+	an old address, edit _data/redirects.yml.
+{% endcomment %}
+{%- assign known_pages = site.html_pages | where_exp: "p", "p.sitemap != false" -%}
+<script>
+	(function () {
+		var redirects = {
+{%- for item in site.data.redirects %}
+			{{ item.from | jsonify }}: {{ item.to | relative_url | jsonify }},
+{%- endfor %}
+		};
+		var pages = [
+{%- for known_page in known_pages %}
+			{{ known_page.url | relative_url | jsonify }},
+{%- endfor %}
+		];
+		var base = {{ site.baseurl | default: "" | jsonify }};
+
+		// "/Calls.HTML", "/calls", "/calls/" and "/calls.html/" all become "/calls".
+		function normalize(path) {
+			try { path = decodeURI(path); } catch (e) {}
+			path = path.toLowerCase().replace(/\/+$/, "").replace(/\.html$/, "").replace(/\/index$/, "");
+			return path === "" ? "/" : path;
+		}
+
+		var lookup = {};
+		pages.forEach(function (url) { lookup[normalize(url)] = url; });
+		Object.keys(redirects).forEach(function (from) {
+			lookup[normalize(base + from)] = redirects[from];
+		});
+
+		var here = window.location.pathname;
+		var target = lookup[normalize(here)];
+		if (target && target !== here) {
+			// replace() keeps the broken address out of the Back button history.
+			window.location.replace(target + window.location.search + window.location.hash);
+		}
+	})();
+</script>
+
+<p>Sorry, the page you are looking for does not exist or has moved.</p>
+
+<p>Please use the menu above, or go to the <a href="{{ '/' | relative_url }}">home page</a>.</p>

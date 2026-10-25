@@ -1,0 +1,39 @@
+# =============================================================================
+#  OLD ADDRESSES  (used by the "Page not found" page, pages/404.html)
+#
+#  When a page is renamed or removed, add its old address here with the page
+#  visitors should land on instead. Anyone following an old link, bookmark or
+#  search result is then sent to the new page instead of seeing an error.
+#
+#    from   the old address
+#    to     where to send the visitor
+#
+#  Small differences need no entry of their own: capital letters, a missing
+#  ".html" and a "/" at the end are ignored (/Calls, /calls/ and /CALLS.HTML
+#  all open /calls.html automatically).
+#
+#  EXAMPLE - the Venue page was renamed to Location:
+#
+#      - from: /venue.html
+#        to: /location.html
+# =============================================================================
+
+# Research call, merged into the Calls page (October 2026).
+- from: /callResearchs.html
+  to: /calls.html
+
+# Pages of the SSTD 2025 site this one was copied from.
+- from: /submit.html
+  to: /calls.html
+
+- from: /papers3.html
+  to: /papers.html
+
+- from: /program_full_detail3.html
+  to: /program_full_detail.html
+
+- from: /program_full_detail_draft.html
+  to: /program_full_detail.html
+
+- from: /session_detail.html
+  to: /program_full_detail.html

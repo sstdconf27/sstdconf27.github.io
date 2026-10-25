@@ -50,6 +50,7 @@ site).
 | Program committees | `_data/program_committee.yml` |
 | Keynotes | `_data/keynotes.yml` |
 | Detailed program (timetable) | `_data/schedule.yml` |
+| Old address of a renamed or removed page (sends visitors to the new one) | `_data/redirects.yml` |
 | Any other page (calls, accepted papers, awards, panel, registration, venue, travel, visa, accommodation, attractions) | the page's file in `pages/` |
 
 Every file in `_data/` and every page in `pages/` **starts with a short
