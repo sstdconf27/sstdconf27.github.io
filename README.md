@@ -17,7 +17,7 @@ _data/               lists, one file each (see the table below)
 pages/               one file per page, grouped like the menu
     home.html
     organizers.html
-    calls/           calls.md, call-research.md, call-thesis.md, call-tutorials.md
+    calls/           calls.md, call-thesis.md, call-tutorials.md
     program/         program.md, schedule.html, keynotes.html, accepted-papers.md,
                      accepted-tutorials.md, awards.md, panel.md
     attend/          attend.md, registration.md, venue.md, travel.md, visa.md,
